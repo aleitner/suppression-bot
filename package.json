@@ -1,0 +1,11 @@
+{
+  "name": "dai-supression-bot",
+  "version": "1.0.0",
+  "description": "Dai is too positive so lets suppress him",
+  "main": "bot.js",
+  "author": "Alexander Leitner ",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "sentiment": "^5.0.2"
+  }
+}
