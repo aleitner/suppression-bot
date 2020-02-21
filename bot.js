@@ -18,7 +18,7 @@ client.on('message', msg => {
 
     var result = sentiment.analyze(msg.content)
 
-    if (result.score >= 3) {
+    if (result.score >= 5) {
         suppression_count += 1;
         msg.delete(1000);
         msg.channel.send(`Dai has been too positive. ${suppression_count} message(s) suppressed.`);
