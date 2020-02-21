@@ -17,7 +17,9 @@ client.on('message', msg => {
 
     var result = sentiment.analyze(msg.content)
 
-    msg.channel.send(`<@${user_id}> message sentiment analysis: ${result.comparative}`);
+    if (result.comparative != 0) {
+        msg.channel.send(`<@${user_id}> message sentiment analysis: ${result.comparative}`);
+    }
 
     if (result.comparative > 1) {
         msg.channel.send(`<@${user_id}> has been very positive. Are you sure what you are saying is genuine and sincere?`);
